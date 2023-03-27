@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bottom</title>
+</head>
+<body>
+    <div>
+        <h2>列舉</h2>
+        <ul>
+            <li>選項一</li>
+            <li>選項二</li>
+            <li>選項三</li>
+        </ul>
+    </div>
+    <div>
+        <h2>按鈕</h2>
+        <button>點我</button>
+    </div>
+    <div>
+        <h2>表格</h2>
+        <div>thead是主題列</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>age</th>
+                    <th>分類三</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Clair</td>
+                    <td>25</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>Lin</td>
+                    <td>56</td>
+                    <td>b</td>
+                </tr>
+                <tr>
+                    <td>Joy</td>
+                    <td>26</td>
+                    <td>c</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>嵌入用iframe</h2>
+        <div>找到需要的影片/地圖，選擇嵌入</div>
+        <div>youtube的，可以透過改width調整寬度</div>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0UsgYSHrML4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="" frameborder="0"></iframe>
+        <div>google map的</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0171992534974!2d120.72061401528462!3d24.17112957848955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346919de0f9d4653%3A0x344c85f2a33a8a78!2z56S-5ZyY5rOV5Lq65rC05rCP5oWI5ZaE5Y2U5pyD!5e0!3m2!1szh-TW!2stw!4v1679916642948!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div>
+        <h2>提交表單1</h2>
+        <div>method預設為get</div>
+        <div>get適合可公開訊息(平信)，post適合私密訊息(掛號)</div>
+        <form method=get action="url">
+            <div>帳號
+                <input type="text" name="account">
+            </div>
+            <div>密碼
+                <input type="password" name="pwd">
+            </div>
+            <div>數字
+                <input type="number" name="money">
+            </div>
+            <div>電話
+                <input type="tel" name="phone">
+                <span>手機會看到數字鍵盤</span>
+            </div>
+            <div>顏色
+                <input type="color" name="bg-color">
+            </div>
+            <div>日期
+                <input type="date" name="schedule-date">
+            </div>
+            <div>時間
+                <input type="time" name="schedule-time">
+            </div>
+            <div>檔案(問老師測試API)
+                <input type="file" name="my-pic">
+            </div>
+            <div>單選
+                <input type="radio" name="sex" value="male">男
+                <input type="radio" name="sex" value="female">女
+                <span>需要設定value，暗示填寫人輸入內容</span>
+            </div>
+            <div>多選
+                <input type="checkbox" name="ins[]" value="a">a
+                <input type="checkbox" name="ins[]" value="b">b
+                <input type="checkbox" name="ins[]" value="c">c
+                <input type="checkbox" name="ins[]" value="d">d
+                <span>多選name後面加合集[]</span>
+            </div>
+            <div>提交
+                <input type="submit">
+                <span>不建議使用，有點老</span>
+            </div>
+        </form>        
+    </div>
+    <div>
+        <h2>提交表單2</h2>
+        <form method=get action="url">
+            <div>多行輸入1</div>
+            <textarea name="remark" id="001" cols="30" rows="10"></textarea>
+        </form>
+        <form action="url">
+            <div>多行輸入2(禁止拉框大小)</div>
+            <div>style="resixe:none"</div>
+            <textarea name="remark" id="002" cols="30" rows="10" style="resize:none"></textarea>
+        </form>
+    </div>
+    <div>
+        <h2>提交表單(加標籤)</h2>
+        <div>單選
+            <input type="radio" name="sex" value="male" id="s-m">
+            <label for="s-m">男</label>
+            <input type="radio" name="sex" value="female" id="s-f">
+            <label for="s-f">女</label>
+    </div>
+
+
+</body>
+</html>
