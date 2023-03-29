@@ -1,0 +1,41 @@
+button{
+background-color: bisque;
+color:black;
+border:0;
+padding:10px 30px;
+font-size:20px;
+}
+
+button:hover{
+background-color: rgb(218, 150, 67);
+}
+
+form{
+background-color:antiquewhite;
+text-align:left;
+padding:20px;
+
+
+}
+
+#club{
+color:aliceblue;
+font-size: 25px;
+width:100px;
+height:100px;
+background-color:rgb(29, 17, 4);
+/* background-image:url(../image/dog.jpeg); */
+background-size: cover;
+line-height:100px;
+font-weight:100;
+text-align:center;
+padding:30px
+}
+
+::after,
+::before{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+
+}
