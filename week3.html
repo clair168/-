@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+
+</head>
+<body>
+    <style>
+        div{color:gray;}
+        div{color:rgb(26, 126, 40)}
+        span{color:rgb(55, 55, 146)}
+    </style>
+    <div>
+        <h1>今天教CSS</h1>
+    </div>
+    <div>
+        <h3>關於繼承優先權</h3>
+        <div>離越近優先越大，除非你加!important</div>
+        <div>!important > HTML 屬性 > ID 選擇器 > Class 選擇器 | 偽類 | 屬性選擇器 > 元素 (Element) > 全域 (*)</div>
+        <div style="color:blue">示範</div>
+        <div>第一</div>
+        <span>第二</span>
+        <span><div>第三</div></span>
+    </div>
+
+    <div>
+        ::after,
+::before{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    問老師
+    </div>
+    <div>
+        問按鈕怎麼去左邊
+    </div>
+</body>
+</html>
