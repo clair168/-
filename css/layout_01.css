@@ -1,0 +1,131 @@
+.container {
+    width: 600px;
+    height: 100%;
+    margin: auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.top-menu {
+    background: #555555;
+    color: #fff;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logo img {
+    width: 100px;
+    height: auto;
+}
+.menu {
+    border-top: 1px solid #414141;
+    border-bottom: 1px solid #414141;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-group {
+
+    margin-top: 20px;
+    display: flex;
+}
+
+.img-group-item {
+    display: flex;
+    background: #dedede;
+    width: 33.3%;
+    margin-right: 2%;
+    height: 100px;
+    align-items: center;
+}
+
+.img-resource {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slider {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    background: #dedede;
+    position: relative;
+}
+
+.slider-component {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-dots {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* background:red; */
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgb(11, 48, 172);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.img-resource:hover{
+    background: rgb(197, 119, 30);
+    color:bisque
+}
+
+.gender:hover{
+    width:30px;
+    height:30px;
+}
+
+.slider-dots li:nth-child(2) .slider-dot {
+    background:red;}
