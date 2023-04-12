@@ -90,6 +90,10 @@
     top: -10px;
 }
 
+#ad-switch:checked + .ad-banner{
+    display: none;
+}
+
 a {
     color: inherit;
     text-decoration: none;
