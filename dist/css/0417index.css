@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 s1 {
   width: 100px;
   height: 100px;
