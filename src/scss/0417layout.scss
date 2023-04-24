@@ -1,24 +1,27 @@
 @import 'reset';
 
-body{
-    background: black;
+body,
+html {
+    background: #000;
+    scroll-behavior: smooth;
 }
 
-.container{
-    max-width: 700px;
+
+.container {
+    max-width: 900px;
     height: 100%;
     position: relative;
     margin: auto;
 }
 
-.header{
+.header {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 2;
-    width:100%;
+    width: 100%;
 
-    .header-container{
+    .header-container {
         height: 80px;
         background: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -30,63 +33,216 @@ body{
         border-bottom-right-radius: 8px;
     }
 
-    .menu ul{
+    .menu ul {
         list-style: none;
         display: flex;
-    
-        li{
+
+        li {
             text-align: center;
             margin-right: 15px;
             font-size: 18px;
-            &:last-child{
+
+            &:last-child {
                 margin-right: 0;
             }
-            &:hover{
+
+            &:hover {
                 color: rgb(89, 89, 184);
             }
         }
     }
 }
 
-.footer{
+.footer {
     background-color: white;
     height: 100px;
 
-    .footer-container{
+    .footer-container {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         height: 100%;
 
-    // max-width: 700px;
+        // max-width: 700px;
     }
 }
 
-.join-form{
+.join-form {
     height: 100vh;
     background: rgb(160, 143, 143);
-    
-    .join-form-wrap{
+    background-image: url(../image/banner.jpeg);
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.356);
+    }
+
+    .join-form-wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
     }
 
-    .join-form-container{
+    .join-form-container {
         display: flex;
         width: 100%;
-        height: 100%;
-        background: red;
+        height: 350px;
+        background: rgb(40, 11, 145);
+        color: white;
         display: flex;
         justify-content: space-between;
-        
-        >div{
+
+        >div {
             width: 50%;
+            padding: 30px;
         }
+
+    }
+
+    .join-form-left-side {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            border-left: 3px dashed #fff;
+            height: calc(100% - 60px);
+            right: 0;
+            top: 30px;
+        }
+    }
+
+    .text-content {
+        line-height: 30px;
+        text-align: justify;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+
+        input {
+            width: 100%;
+            height: 40px;
+            border: 0;
+            outline: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+    }
+
+    .join-form-submit {
+        text-align: right;
+    }
+
+}
+
+.slogan {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 140px);
+        width: 0;
+        height: 3px;
+        border-left: solid 100px #1072c2;
+        border-right: solid 180px #fff;
     }
 }
 
-.wrap{
-height: 100vh;
+.courses {
+    height: 100vh;
+    background: rgb(6, 9, 46);
+    background-image: url(../image/process.jpeg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 120px;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.356);
+    }
+}
+
+.button {
+    background: #1042cc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+
+.flow {
+    position: relative;
+    z-index: 2;
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 0;
+            top: 0;
+            border-left: 4px dashed #fff;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background: red;
+            border-radius: 30px;
+            position: relative;
+            // 設relative是為了設圖層
+            z-index: 2;
+        }
+
+        .text {
+            position: absolute;
+            left: calc(50% + 50px);
+            background: rgb(0, 60, 255);
+            padding: 20px;
+            border-radius: 6px;
+
+            h4 {
+                margin: bottom 15px;
+            }
+        }
+
+        &:nth-child(even) {
+            .text {
+                left: unset;
+                right: calc(50% + 50px);
+                // 從50%處長50px
+                text-align: right;
+
+            }
+        }
+    }
+
 }
