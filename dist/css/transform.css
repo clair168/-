@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 500px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  display: inline-flex;
+  color: red;
+  background: yellow;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.spring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.spring > div {
+  transform: rotate(135deg);
+}
+
+.product {
+  width: 300px;
+  height: 500px;
+  background-color: rgb(190, 190, 190);
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+}
+.product .product-img {
+  width: 100%;
+  height: 200px;
+  background-color: beige;
+  color: brown;
+  font-size: 30px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.product .product-img > div:first-child {
+  transition-duration: 1s;
+}
+.product .product-img:hover > div:first-child {
+  transform: scale(2);
+  cursor: pointer;
+}
+.product .product-img .product-img-discount {
+  position: absolute;
+  top: 25px;
+  right: -65px;
+  color: white;
+  background-color: red;
+  width: 200px;
+  font-size: 15px;
+  text-align: center;
+  transform: rotate(45deg);
+}
+
+.mini {
+  padding: 20px;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  transform: scale(0.5);
+}
+
+.bg-change {
+  background-color: blue;
+  color: red;
+  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  transition-property: background;
+  transition-duration: 2s;
+}
+.bg-change:hover {
+  background-color: rgb(219, 193, 193);
+  color: blue;
+}
+
+.run {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#run-trigger {
+  display: none;
+}
+#run-trigger:checked ~ .run {
+  animation-name: run-b;
+  animation-duration: 2s;
+}
+
+.button {
+  padding: 10px 20px;
+  background: #3b3ef3;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.button:hover {
+  background: #e95035;
+}
+
+@keyframes run-a {
+  from {
+    left: 0;
+    background: red;
+  }
+  to {
+    left: 100%;
+    background: rgb(0, 81, 255);
+  }
+}
+@keyframes run-b {
+  0% {
+    left: 0;
+    top: 0;
+    background-color: red;
+  }
+  50% {
+    left: 50%;
+    top: 100px;
+    background-color: rgb(179, 255, 0);
+  }
+  100% {
+    left: 100%;
+    top: 0;
+    background-color: rgb(0, 255, 55);
+  }
+}/*# sourceMappingURL=transform.css.map */
