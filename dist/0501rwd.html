@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0501rwd</title>
+    <link rel="stylesheet" href="css/0501rwd.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">成績表</h1>
+        <div class="func">
+            <button onclick="doPrint()">列印</button>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>成績</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>a</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>b</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>c</td>
+                        <td>70</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function doPrint() {
+            window.print();
+        }
+    </script>
+
+</body>
+
+</html>
