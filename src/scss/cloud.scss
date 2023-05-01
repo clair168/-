@@ -1,0 +1,77 @@
+@import 'reset';
+
+body {
+    background-color: rgb(106, 168, 209);
+    width: 100%;
+    overflow: hidden;
+}
+
+.cloud {
+    height: 100px;
+    width: 300px;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    //重複循環
+    animation-direction: alternate;
+    //動畫來回動
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 75px;
+        width: 75px;
+        background-color: inherit;
+        // 繼承顏色
+        left: 50px;
+        top: -30px;
+        border-radius: 100px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 90px;
+        width: 150px;
+        background-color: inherit;
+        left: 100px;
+        top: -45px;
+        border-radius: 300px;
+    }
+
+    &.c2 {
+        top: 400px;
+        left: 200px;
+        transform: scale(1.2) rotateY(180deg);
+        ;
+        animation-duration: 7s;
+    }
+
+    &.c3 {
+        top: 600px;
+        left: 30px;
+        transform: scale(0.5);
+        animation-duration: 3s;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 15px;
+    }
+
+    75% {
+        left: 65%;
+        background-color: rgb(110, 107, 126);
+    }
+
+    100% {
+        left: 100%;
+    }
+}
