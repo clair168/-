@@ -23,6 +23,10 @@ html {
     z-index: 2;
     width: 100%;
 
+    #mobile-switch-box {
+        display: none;
+    }
+
     .header-container {
         height: 80px;
         background: rgb(255, 255, 255);

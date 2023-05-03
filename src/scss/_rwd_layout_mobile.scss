@@ -2,12 +2,42 @@
 
     .header {
         .header-container {
-            .menu ul {
+            .menu {
                 display: none;
             }
 
             .mobile-switch {
                 display: flex;
+            }
+
+            #mobile-switch-box {
+                &:checked {
+                    ~.menu {
+                        display: block;
+                    }
+
+                    ~.mobile-switch {
+                        >span {
+                            background-color: blue;
+
+                            &:first-child {
+                                position: relative;
+                                transform: rotate(45deg);
+                                top: 5px;
+                            }
+
+                            &:nth-child(2) {
+                                display: none;
+                            }
+
+                            &:last-child {
+                                position: relative;
+                                transform: rotate(-45deg);
+                                top: -5px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
