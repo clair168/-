@@ -18,6 +18,7 @@ html {
 }
 
 .container {
+  font-family: "Noto Serif TC", serif;
   max-width: 900px;
   height: 100%;
   position: relative;
@@ -251,8 +252,28 @@ html {
 }
 
 @media screen and (max-width: 800px) {
+  .header {
+    position: relative;
+  }
   .header .header-container .menu {
-    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 100px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .header .header-container .menu ul {
+    flex-direction: column;
+  }
+  .header .header-container .menu ul li {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .header .header-container .menu ul li:last-child {
+    margin-bottom: 0;
   }
   .header .header-container .mobile-switch {
     display: flex;
@@ -261,7 +282,7 @@ html {
     display: block;
   }
   .header .header-container #mobile-switch-box:checked ~ .mobile-switch > span {
-    background-color: blue;
+    background-color: rgb(89, 89, 184);
   }
   .header .header-container #mobile-switch-box:checked ~ .mobile-switch > span:first-child {
     position: relative;
