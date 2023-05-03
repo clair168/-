@@ -1,0 +1,257 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body,
+html {
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 900px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.header .header-container {
+  height: 80px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.header .menu ul {
+  list-style: none;
+  display: flex;
+}
+.header .menu ul li {
+  text-align: center;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.header .menu ul li:last-child {
+  margin-right: 0;
+}
+.header .menu ul li:hover {
+  color: rgb(89, 89, 184);
+}
+.header .mobile-switch {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+.header .mobile-switch > span {
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.header .mobile-switch > span:last-child {
+  margin-bottom: 0;
+}
+.header .mobile-switch:hover > span {
+  background: rgb(122, 110, 233);
+}
+
+.footer {
+  background-color: white;
+  height: 100px;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.join-form {
+  height: 100vh;
+  background: rgb(160, 143, 143);
+  background-image: url(../image/banner.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.join-form::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.356);
+}
+.join-form .join-form-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.join-form .join-form-container {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background: rgb(40, 11, 145);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.join-form .join-form-container > div {
+  width: 50%;
+  padding: 30px;
+}
+.join-form .join-form-left-side {
+  position: relative;
+}
+.join-form .join-form-left-side::before {
+  content: "";
+  position: absolute;
+  border-left: 3px dashed #fff;
+  height: calc(100% - 60px);
+  right: 0;
+  top: 30px;
+}
+.join-form .text-content {
+  line-height: 30px;
+  text-align: justify;
+}
+.join-form .form-control {
+  margin-bottom: 15px;
+}
+.join-form .form-control input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.join-form .join-form-submit {
+  text-align: right;
+}
+
+.slogan {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.slogan::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 140px);
+  width: 0;
+  height: 3px;
+  border-left: solid 100px #1072c2;
+  border-right: solid 180px #fff;
+}
+
+.courses {
+  height: 100vh;
+  background: rgb(6, 9, 46);
+  background-image: url(../image/process.jpeg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding-top: 120px;
+}
+.courses::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.button {
+  background: #1042cc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+}
+
+.flow {
+  position: relative;
+  z-index: 2;
+}
+.flow .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.flow .item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  border-left: 4px dashed #fff;
+}
+.flow .item .circle {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.flow .item .text {
+  position: absolute;
+  left: calc(50% + 50px);
+  background: rgb(0, 60, 255);
+  padding: 20px;
+  border-radius: 6px;
+}
+.flow .item .text h4 {
+  margin: bottom 15px;
+}
+.flow .item:nth-child(even) .text {
+  left: unset;
+  right: calc(50% + 50px);
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .header .header-container .menu ul {
+    display: none;
+  }
+  .header .header-container .mobile-switch {
+    display: flex;
+  }
+}/*# sourceMappingURL=0503rwd_layout.css.map */

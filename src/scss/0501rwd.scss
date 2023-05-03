@@ -52,8 +52,4 @@
     }
 }
 
-@media print {
-    .func {
-        display: none;
-    }
-}
+@import 'rwd_print_print';
