@@ -1,0 +1,98 @@
+@media screen and (max-width: 800px) {
+  .header .header-content {
+    position: relative;
+  }
+  .header .header-content .menu {
+    position: absolute;
+    background: #fff;
+    top: -500px;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: 0.3s;
+  }
+  .header .header-content .menu ul {
+    flex-direction: column;
+  }
+  .header .header-content .menu ul li {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .header .header-content .menu ul li:last-child {
+    margin-bottom: 0;
+  }
+  .header .header-content .mobile-switch {
+    display: flex;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu {
+    top: 90px;
+    opacity: 1;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span {
+    background: rgb(255, 57, 42);
+  }
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:first-child {
+    position: relative;
+    transform: rotate(45deg);
+    top: 5px;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:nth-child(2) {
+    display: none;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:last-child {
+    position: relative;
+    transform: rotate(-45deg);
+    top: -5px;
+  }
+  .join-form {
+    height: unset;
+    min-height: 100vh;
+  }
+  .join-form .join-form-wrap {
+    height: unset;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+  .join-form .join-form-wrap .join-form-content {
+    flex-direction: column;
+    background: transparent;
+    height: unset;
+    padding-bottom: 60px;
+  }
+  .join-form .join-form-wrap .join-form-content > div {
+    width: 100%;
+    height: 300px;
+    background: rgb(5, 47, 138);
+  }
+  .join-form .join-form-wrap .join-form-content .join-form-left-side::before {
+    right: unset;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: calc(100% - 60px);
+    margin-left: 30px;
+    border-left-width: 0;
+    border-bottom: 3px dashed #fff;
+  }
+  .flow .item {
+    justify-content: flex-start;
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+  .flow .item::before {
+    left: 18px;
+  }
+  .flow .item .text {
+    left: 50px;
+  }
+  .flow .item:nth-child(even) .text {
+    left: 50px;
+    right: unset;
+    text-align: left;
+  }
+}/*# sourceMappingURL=0508Bootstrap.css.map */
