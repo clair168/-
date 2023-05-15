@@ -25,10 +25,14 @@ body {
   position: absolute;
   top: 100px;
   left: 100px;
-  animation-name: move;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .cloud::after {
   content: "";
@@ -54,13 +58,28 @@ body {
   top: 400px;
   left: 200px;
   transform: scale(1.2) rotateY(180deg);
-  animation-duration: 7s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
 }
 .cloud.c3 {
   top: 600px;
   left: 30px;
   transform: scale(0.5);
-  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 15px;
+  }
+  75% {
+    left: 65%;
+    background-color: rgb(110, 107, 126);
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 @keyframes move {
