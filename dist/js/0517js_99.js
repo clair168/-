@@ -48,10 +48,11 @@ const genTable = () => {
     }
 
     let table = document.querySelector(`#table`);
+    console.log(table)
     let theadTr = table.querySelector(`thead tr`);
 
     theadTr.innerHTML = '';
-    theadTr.forEach((n, nindex) => {
+    thead.forEach((n, nindex) => {
         theadTr.innerHTML += `<th>${n}</th>`;
         // theadTr.innerHTML = theadTr.innerHTML + `<th>${n}</th>`; 
     })
