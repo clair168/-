@@ -39,11 +39,12 @@ const genTable = () => {
     thead.push('');
 
     //抓n1值=>抓n2值=>push出來長的形狀，i&j是為了push做的代號
-    let result = [];
+    let result = {};
     for (let i = 1; i <= n1.value; i++) {
         thead.push(i);
+        result[i] = [];
         for (let j = 1; j <= n2.value; j++)
-            result.push(`${i}x${j}=${i * j}`);
+            result[i].push(i * j);
     }
 
     let table = document.querySelector(`#table`);
@@ -56,7 +57,20 @@ const genTable = () => {
     })
     console.log(thead);
 
+    let tbody = table.querySelector('tbody');
+    let tbodyTr = '';
+    tbody.innerHTML = '';
 
+    for (let row in result) {
+        tbodyTr = `<tr><td>${row}</td>`;
+        let columns = result[row];
+        columns.forEach(value => {
+            tbodyTr += `<td>${value}</td>`;
+        });
+
+        tbodyTr += '</tr>';
+        tbody.innerHTML += tbodyTr;
+    }
 }
 
 let make = document.querySelector('#make');
