@@ -27,3 +27,18 @@ mobileIcon.addEventListener('click', () => {
         mobileIcon.classList.add('active');
     }
 });
+
+const lazyLoad = () => {
+    let images = document.querySelectorAll('.image-block img');
+    images.forEach(img => {
+        let src = img.dataset.src;
+        if (src) {
+            img.src = src;
+        }//如果沒有if，沒有lazyLoad會5秒便空的
+    });
+}
+
+//5000=5sec
+setTimeout(() => {
+    lazyLoad();
+}, 5000)
