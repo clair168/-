@@ -72,7 +72,7 @@
     let link = document.querySelector('#link');
 
     link.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault();//中斷預設行為，不跳轉
         let about = document.querySelector('.about');
         about.classList.add('active');
     })
