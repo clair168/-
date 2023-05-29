@@ -20,16 +20,36 @@
         <li>3</li>
         <li>4</li>
     </ul>
+    <button id="append">Append</button>
 </body>
 
 <script>
-    let items = document.querySelectorAll('#menu li');
+    let menu = document.querySelector('#menu');
 
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            console.log(item.innerHTML);
-        })
+    menu.addEventListener('click', (e) => {
+        let target = e.target;
+        console.log(target.innterHTML);
     })
+
+    let append = document.querySelector('#append');
+    append.addEventListener('click', () => {
+        let menu = document.querySelector('#menu');
+
+        let li = document.createElement('li');
+        li.innerHTML = '5';
+        menu.appendChild(li);
+
+        let li2 = document.createElement('li');
+        li2.innerHTML = '6';
+        menu.appendChild(li2);
+    })
+    // let items = document.querySelectorAll('#menu li');
+
+    // items.forEach(item => {
+    //     item.addEventListener('click', () => {
+    //         console.log(item.innerHTML);
+    //     })
+    // })
 </script>
 
 </html>
