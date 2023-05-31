@@ -10,48 +10,51 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="slogan">to do list</h1>
-        <div class="todo-input">
-            <label for="item-name">項目名稱</label>
-            <input type="text" id="item-name">
-            <button id="add-btn">加入</button>
-        </div>
-        <div class="todo-status">
-            <div class="pending-item">
-                <h3 class="slogan">代辦清單</h3>
-                <ul id="pending-item">
-                    <li>
-                        <input type="checkbox" id="item-1">
-                        <label for="item-1">hello</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item-2">
-                        <label for="item-2">world</label>
-                    </li>
-                </ul>
+    <div id="app">
+        {{ name }}
+        <div class="container">
+            <h1 class="slogan">to do list</h1>
+            <div class="todo-input">
+                <label for="item-name">項目名稱</label>
+                <input type="text" id="item-name">
+                <button id="add-btn">加入</button>
             </div>
-            <div class="pending-item">
-                <h3 class="slogan">完成清單</h3>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="item-1">
-                        <label for="item-1">hello</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item-2">
-                        <label for="item-2">world</label>
-                    </li>
-                </ul>
+            <div class="todo-status">
+                <div class="pending-item">
+                    <h3 class="slogan">代辦清單</h3>
+                    <ul id="pending-item">
+                        <li>
+                            <input type="checkbox" id="item-1">
+                            <label for="item-1">hello</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="item-2">
+                            <label for="item-2">world</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pending-item">
+                    <h3 class="slogan">完成清單</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="item-1">
+                            <label for="item-1">hello</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="item-2">
+                            <label for="item-2">world</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
 </body>
+
 <!-- https://vuejs.org/guide/quick-start.html#using-vue-from-cdn -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <!-- https://sweetalert2.github.io/ -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/0531-todolist.js"></script>
+<script src="js/0531-todolist-vue.js"></script>
 
 </html>
