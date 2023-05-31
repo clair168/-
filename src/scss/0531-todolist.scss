@@ -1,0 +1,44 @@
+@import 'reset';
+
+.container {
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.todo-input {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    >label {
+        margin-right: 15px;
+    }
+
+    >input {
+        flex: 1;
+        //剩下空間由它填滿
+        height: 36px;
+        outline: 0;
+        padding: 0 15px;
+        border: 0;
+        border-bottom: 1px solid #000;
+        font-size: 30px;
+    }
+
+    >button {
+        padding: 10px 20px;
+        border: 0;
+        background: #2252ac;
+        color: #fff;
+        margin-left: 15px;
+    }
+}
+
+.pending-item {
+    input[type="checkbox"]:checked~label {
+        text-decoration: line-through;
+    }
+}
