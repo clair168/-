@@ -1,4 +1,4 @@
-Vue.createApp({
+let vm = Vue.createApp({
     data() {
         return {
             pending: [],
@@ -8,7 +8,7 @@ Vue.createApp({
     },
     methods: {
         doAddItem() {
-            let Value = this.itemValue;
+            let value = this.itemValue;
             if (!value) {
                 Swal.fire({
                     icon: 'error',
@@ -22,7 +22,7 @@ Vue.createApp({
                 })
                 return;
             }
-            console.log(value);
+            this.pending.push(value);
         }
     }
 }).mount('#app');
