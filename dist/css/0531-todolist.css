@@ -19,6 +19,13 @@ a {
   margin: auto;
 }
 
+.slogan {
+  background: rgb(80, 121, 168);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 .todo-input {
   display: flex;
   align-items: center;
@@ -42,8 +49,22 @@ a {
   background: #2252ac;
   color: #fff;
   margin-left: 15px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .pending-item input[type=checkbox]:checked ~ label {
   text-decoration: line-through;
+}
+
+.todo-status {
+  display: flex;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.todo-status > div {
+  width: calc(50% - 8px);
+  border: 1px solid #dedede;
+  padding: 15px;
 }/*# sourceMappingURL=0531-todolist.css.map */
