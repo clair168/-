@@ -15,11 +15,31 @@ const init = () => {
             }).then(() => {//然後要幹嘛
                 setTimeout(() => {//單次計時器
                     itemName.focus();
-                }, 500)//數字太小動畫還沒跑完
+                }, 500)//數字太小動畫還沒跑完，0.5秒後再鎖定
             })
 
             return;
         }
+
+        let ul = document.querySelector('#pending-item');
+        // 正規作法
+        // let li = document.createElement('li');
+        // let checkbox = document.createElement('input');
+        // let label = document.createElement('label');
+        // checkbox.type = 'checkbox';
+        // label.innerHTML = value;
+        // li.appendChild(checkbox);
+        // li.appendChild(label);
+
+        // ul.appendChild(li);
+
+        // 簡單作法
+        ul.innerHTML += `
+            <li>
+                <input type="checkbox">
+                    <label for="">${value}</label>
+            </li>
+            `;
     }
 
     addBnt.addEventListener('click', () => {
