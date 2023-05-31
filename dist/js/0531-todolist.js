@@ -12,8 +12,12 @@ const init = () => {
                 title: 'Oops...',
                 text: 'Something went wrong!',
                 footer: '<a href="">Why do I have this issue?</a>'
+            }).then(() => {//然後要幹嘛
+                setTimeout(() => {//單次計時器
+                    itemName.focus();
+                }, 500)//數字太小動畫還沒跑完
             })
-            itemName.focus();
+
             return;
         }
     }
