@@ -9,4 +9,8 @@
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }/*# sourceMappingURL=0522_js_dom_control.css.map */

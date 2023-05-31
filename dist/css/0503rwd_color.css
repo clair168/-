@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .colorful {
   width: 90%;
   margin: 10px auto;
