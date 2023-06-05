@@ -50,7 +50,7 @@ let vm = Vue.createApp({
             this.pending.splice(index, 1);
             this.update();
         },
-        toPenging(index) {
+        toPending(index) {
             let value = this.done[index];
             this.pending.push(value);
             this.done.splice(index, 1);
