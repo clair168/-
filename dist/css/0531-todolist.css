@@ -15,6 +15,10 @@ ul {
   list-style-type: none;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .container {
   max-width: 800px;
   height: 100%;

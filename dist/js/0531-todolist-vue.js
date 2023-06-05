@@ -17,12 +17,13 @@ let vm = Vue.createApp({
                     footer: '<a href="">Why do I have this issue?</a>'
                 }).then(() => {//然後要幹嘛
                     setTimeout(() => {//單次計時器
-                        itemName.focus();
                     }, 500)//數字太小動畫還沒跑完，0.5秒後再鎖定
                 })
                 return;
             }
             this.pending.push(value);
+            this.itemValue = '';
+            this.$refs.itemValue.focus();//$refs???
         },
         toDone(index) {
             console.log(index);
