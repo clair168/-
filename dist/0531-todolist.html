@@ -22,21 +22,16 @@
                 <div class="pending-item">
                     <h3 class="slogan">代辦清單</h3>
                     <ul id="pending-item">
-                        <li v-for="(item, itemIndex) in pending">
+                        <li v-for="(item, itemIndex) in pending" @click="toDone(itemIndex)">
                             <label for="">{{ item }} </label>
                         </li>
                     </ul>
                 </div>
-                <div class="pending-item">
+                <div class="done-item">
                     <h3 class="slogan">完成清單</h3>
                     <ul>
-                        <li>
-                            <input type="checkbox" id="item-1">
-                            <label for="item-1">hello</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="item-2">
-                            <label for="item-2">world</label>
+                        <li v-for="(item, itemIndex) in pending">
+                            <label for="">{{ item }} </label>
                         </li>
                     </ul>
                 </div>

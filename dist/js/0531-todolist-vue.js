@@ -23,6 +23,11 @@ let vm = Vue.createApp({
                 return;
             }
             this.pending.push(value);
+        },
+        toDone(index) {
+            console.log(index);
+            // 把代辦項目搬移到已完成資料內
+            // 刪除目前代辦項目
         }
     }
 }).mount('#app');
