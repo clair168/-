@@ -1,9 +1,17 @@
 const database = {
     set(key, value) {
-        localStorage.setItem(key.value)
+        value = JSON.stringify(value);
+        localStorage.setItem(key, value)
     },
     get(key) {
-        return localStorage.getItem(key);
+        let value = localStorage.getItem(key);
+        if (value) {
+            value = JSON.stringify(value);
+        }
+        return value;
+    },
+    remove(key) {
+        localStorage.setItem(key, value);
     }
 }
 
@@ -32,7 +40,7 @@ let vm = Vue.createApp({
             }
             this.pending.push(value);
             this.itemValue = '';
-            this.$refs.itemValue.focus();//$refs???
+            this.$refs.itemValue.focus();
         },
         toDone(index) {
             let value = this.pending[index];
@@ -40,7 +48,7 @@ let vm = Vue.createApp({
             this.pending.splice(index, 1);
         },
         toPenging(index) {
-            let value = this.pending[index];
+            let value = this.done[index];
             this.pending.push(value);
             this.done.splice(index, 1);
         }
