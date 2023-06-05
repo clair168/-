@@ -30,7 +30,7 @@
                 <div class="done-item">
                     <h3 class="slogan">完成清單</h3>
                     <ul>
-                        <li v-for="(item, itemIndex) in done">
+                        <li v-for="(item, itemIndex) in done" @click='toPenging(itemIndex)'>
                             <label for="">{{ item }} </label>
                         </li>
                     </ul>
