@@ -1,3 +1,12 @@
+const database = {
+    set(key, value) {
+        localStorage.setItem(key.value)
+    },
+    get(key) {
+        return localStorage.getItem(key);
+    }
+}
+
 let vm = Vue.createApp({
     data() {
         return {
