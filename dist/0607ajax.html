@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="doAjax">click</button>
+        <div>
+            <h1>response</h1>
+            <div>
+                {{response}}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            doAjax() {
+                console.log('ajax!');
+                //     Swal.fire({
+                //         title: 'doAjax',
+                //         text: 'Just test',
+                //         icon: 'success'
+                //     })
+                // }
+
+                let api = 'https://book.niceinfos.com/frontend/api/?action=demo';
+                let request = new XMLHttpRequest();
+                request.addEventListener('load', () => {
+                    this.response = request.responseText;
+                    console.log('AAAA');
+                });
+
+                request.open('GET', api);
+                request.send();
+                console.log('BBBB')
+
+            }
+        }
+    }).mount('#app')
+</script>
+
+</html>
