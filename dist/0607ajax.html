@@ -38,11 +38,15 @@
                 //     })
                 // }
 
-                let api = 'https://book.niceinfos.com/frontend/api/?action=demo';
+                //let api = 'https://book.niceinfos.com/frontend/api/?action=demo';
+                let api = 'https://book.niceinfos.com/frontend/api/?action=sleep&a=111';
                 let request = new XMLHttpRequest();
                 request.addEventListener('load', () => {
                     this.response = request.responseText;
                     console.log('AAAA');
+                    // 因為回傳資料為字串,需使用反序列化還原成物件
+                    let response = JSON.parse(request.responseText);
+                    console.log(response.data);
                 });
 
                 request.open('GET', api);
