@@ -133,7 +133,7 @@ let vm = Vue.createApp({
                 fetch(`${api}?action=todo&uid=${response.value}`).then(response => {
                     return response.text();
                 }).then(text => {
-                    let response = JSON.parse(text);
+                    let response = JSON.parse(text);//還原格式
                     if (response.data.pending) {
                         this.pending = response.data.pending;
                     }
@@ -142,7 +142,7 @@ let vm = Vue.createApp({
                         this.done = response.data.done;
                     }
 
-                    this.update
+                    this.update()
                 })
             }
         }

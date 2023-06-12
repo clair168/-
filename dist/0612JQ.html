@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0612jQuery</title>
+</head>
+
+<body>
+    <title>jQuery</title>
+</body>
+
+<script src="js/jquery-3.7.0.min.js"></script>
+<script>
+    let $ = 'Hello';
+
+    // 使用 closure 避免 $ 被複寫
+    (($) => {
+        let uid = $('uid').html();
+        console.log(uid);
+    })(jQuery)
+
+    console.log($)
+</script>
+
+</html>
