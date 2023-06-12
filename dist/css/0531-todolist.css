@@ -115,4 +115,30 @@ ul {
   width: calc(50% - 8px);
   border: 1px solid #dedede;
   padding: 15px;
+}
+
+.cloud-func {
+  display: flex;
+  gap: 15px;
+}
+.cloud-func button {
+  border: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cloud-func button.class-save {
+  background-color: #3e89bb;
+  color: white;
+}
+.cloud-func button.class-save:hover {
+  background-color: #64addf;
+}
+.cloud-func button.class-load {
+  background-color: #3ebb81;
+  color: white;
+}
+.cloud-func button.class-load:hover {
+  background-color: #5ed89f;
 }/*# sourceMappingURL=0531-todolist.css.map */

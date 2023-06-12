@@ -116,3 +116,34 @@
         padding: 15px;
     }
 }
+
+.cloud-func {
+    display: flex;
+    gap: 15px;
+
+    button {
+        border: 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &.class-save {
+            background-color: #3e89bb;
+            color: white;
+
+            &:hover {
+                background-color: #64addf
+            }
+        }
+
+        &.class-load {
+            background-color: #3ebb81;
+            color: white;
+
+            &:hover {
+                background-color: #5ed89f
+            }
+        }
+    }
+}
