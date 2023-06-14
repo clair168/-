@@ -1,0 +1,48 @@
+@import 'reset';
+
+.container {
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.header {
+    height: 80px;
+    background: white;
+    font-weight: 700;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-menu {
+        display: flex;
+        gap: 30px;
+    }
+
+    .header-icon {
+        display: flex;
+        gap: 30px;
+        font-size: 20px;
+    }
+}
+
+.footer {
+    background: #202028;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+
+    .footer-social {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
