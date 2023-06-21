@@ -32,6 +32,21 @@ body {
   display: none;
 }
 
+.button {
+  padding: 8px 30px;
+  background: #f5f5f5;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  background: #000;
+  color: #f5f5f5;
+}
+
 .header {
   height: 80px;
   background: #fff;
@@ -161,7 +176,6 @@ body {
   position: relative;
 }
 .slider-block .slider .slider-item li {
-  position: relative;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -204,6 +218,49 @@ body {
 }
 .slider-block .slider .slider-item li.active {
   opacity: 1;
+}
+
+.patent-design {
+  height: 100vh;
+  width: 100%;
+  background-color: #dedede;
+  background-image: url(../image/exclusive_design_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.patent-design .design-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.patent-design .design-wrap .design-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.patent-design .design-title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.patent-design .design-text {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.patent-design .design-popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: 1;
+  display: none;
+  opacity: 0;
 }
 
 .page {
